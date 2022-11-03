@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+import {Routes, Route} from 'react-router-dom';
+import AddItem from './AddItem';
+import Home from './Home';
 import './App.css';
+export default function App() {
 
-function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main'>
+      <div >
+        <h1 className='heading'>Personal Shopping List</h1>
+      <Routes>
+          <Route path="/AddItem" element={<AddItem />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
     </div>
   );
 }
-
-export default App;
